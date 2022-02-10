@@ -1,0 +1,51 @@
+<?php return array (
+  'response' => 
+  array (
+    'count' => 6,
+    'items' => 
+    array (
+      'latest' => 
+      array (
+        'id' => '1',
+        'name' => 'latest',
+        'title' => 'Новые',
+        'description' => NULL,
+      ),
+      'featured' => 
+      array (
+        'id' => '4',
+        'name' => 'featured',
+        'title' => 'Рекомендуемые',
+        'description' => NULL,
+      ),
+      'popular' => 
+      array (
+        'id' => '3',
+        'name' => 'popular',
+        'title' => 'Популярные',
+        'description' => NULL,
+      ),
+      'rating' => 
+      array (
+        'id' => '2',
+        'name' => 'rating',
+        'title' => 'Рейтинг',
+        'description' => NULL,
+      ),
+      'compatible' => 
+      array (
+        'id' => '11',
+        'name' => 'compatible',
+        'title' => 'Актуальные',
+        'description' => '<p>Дополнения, авторы которых указали совместимость с последней версией InstantCMS.</p>',
+      ),
+      'sale' => 
+      array (
+        'id' => '10',
+        'name' => 'sale',
+        'title' => 'Со скидкой',
+        'description' => '<p>Дополнения для InstantCMS со скидкой.</p>',
+      ),
+    ),
+  ),
+);

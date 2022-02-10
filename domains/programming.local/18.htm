@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Главная</title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-a..'><link rel="stylesheet" href="./style.css">
+<style>
+
+body {
+background: #8bc34a;
+color: white;
+text-align: center;
+}
+
+a {
+color: inherit;
+}
+
+h1, h2, h3, h4 {
+margin: 0;
+
+}
+
+h1 {
+font-size: 3em;
+}
+
+.menu {
+-webkit-filter: url("#goo");
+filter: url("#goo");
+}
+
+.menu-item, .menu-open-button {
+background: #e91e63;
+border-radius: 100%;
+width: 100px;
+height: 100px;
+margin-left: -40px;
+position: absolute;
+top: 20px;
+color: white;
+text-align: center;
+line-height: 80px;
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+-webkit-transition: -webkit-transform ease-out 200ms;
+transition: transform ease-out 200ms;
+}
+
+.menu-open {
+display: none;
+}
+
+.hamburger {
+width: 25px;
+height: 3px;
+background: white;
+display: block;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -12.5px;
+margin-top: -1.5px;
+-webkit-transition: -webkit-transform 200ms;
+transition: transform 200ms;
+}
+
+.hamburger-1 {
+-webkit-transform: translate3d(0, -8px, 0);
+transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+-webkit-transform: translate3d(0, 8px, 0);
+transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+-webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+-webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+-webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+transform: translate3d(0, 0, 0) rotate(-45deg); 
+}
+
+.menu {
+position: fixed;
+left: 50%;
+top:45%;
+margin-left: -190px;
+padding-top: 20px;
+padding-left: 190px;
+box-sizing: border-box;
+font-size: 20px;
+text-align: left;
+z-index: 100;
+opacity: 0.3;
+transition:1s;
+}
+.menu:hover{
+opacity: 110;
+}
+.menu-item:hover {
+background: white;
+color: #e91e63;
+}
+.menu-item:nth-child(3) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+}
+.menu-item:nth-child(4) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+}
+.menu-item:nth-child(5) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+}
+.menu-item:nth-child(6) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+}
+.menu-item:nth-child(7) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+}
+.menu-item:nth-child(8) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+}
+.menu-item:nth-child(9) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+}
+
+.menu-open-button {
+z-index: 2;
+-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+-webkit-transition-duration: 400ms;
+transition-duration: 400ms;
+-webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+cursor: pointer;
+}
+
+.menu-open-button:hover {
+-webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+-webkit-transition-timing-function: linear;
+transition-timing-function: linear;
+-webkit-transition-duration: 200ms;
+transition-duration: 200ms;
+-webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+-webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+.menu-open:checked ~ .menu-item:nth-child(3) {
+-webkit-transition-duration: 180ms;
+transition-duration: 180ms;
+-webkit-transform: translate3d(0.08361px, -104.99997px, 0);
+transform: translate3d(0.08361px, -104.99997px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(4) {
+-webkit-transition-duration: 280ms;
+transition-duration: 280ms;
+-webkit-transform: translate3d(90.9466px, -52.47586px, 0);
+transform: translate3d(90.9466px, -52.47586px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(5) {
+-webkit-transition-duration: 380ms;
+transition-duration: 380ms;
+-webkit-transform: translate3d(90.9466px, 52.47586px, 0);
+transform: translate3d(90.9466px, 52.47586px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(6) {
+-webkit-transition-duration: 480ms;
+transition-duration: 480ms;
+-webkit-transform: translate3d(0.08361px, 104.99997px, 0);
+transform: translate3d(0.08361px, 104.99997px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(7) {
+-webkit-transition-duration: 580ms;
+transition-duration: 580ms;
+-webkit-transform: translate3d(-90.86291px, 52.62064px, 0);
+transform: translate3d(-90.86291px, 52.62064px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(8) {
+-webkit-transition-duration: 680ms;
+transition-duration: 680ms;
+-webkit-transform: translate3d(-91.03006px, -52.33095px, 0);
+transform: translate3d(-91.03006px, -52.33095px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(9) {
+-webkit-transition-duration: 780ms;
+transition-duration: 780ms;
+-webkit-transform: translate3d(-0.25084px, -104.9997px, 0);
+transform: translate3d(-0.25084px, -104.9997px, 0);
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+body,html{
+height: 100%;
+margin: 0px;
+}
+#home,#training,#news,#sport,#about,#contact{
+height: 100%;
+width: 100%;
+
+}
+#home{
+background:rgba(255,138,101 ,1);
+}
+#training{
+background: #997AEF;
+}
+#news{
+background: #4F94EF;
+}
+#sport{
+background: yellowgreen;
+}
+#about{
+background: #10C960;
+}
+#contact{
+background: gold;
+}
+line {
+border: 5px solid orangered;
+-moz-border-top-colors: #000 blue #000 blue #000;
+-moz-border-left-colors: #000 blue #000 blue #000;
+-moz-border-right-colors: #000 blue #000 blue #000;
+-moz-border-bottom-colors: #000 blue #000 blue #000;
+background: #FE5F55;
+padding: 10px;
+} 
+</style>
+</head>
+<body>
+
+    <script>
+        // Smooth Scrolling
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top
+        }, 1000);
+        return false;
+        }
+        }
+        });
+        });
+        
+        </script>
+        
+<!— partial:index.partial.html —>
+<div class="nav-bar">
+<nav class="menu">
+<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+<label class="menu-open-button" for="menu-open" value="Gallery">
+<span class="hamburger hamburger-1"></span>
+<span class="hamburger hamburger-2"></span>
+<span class="hamburger hamburger-3"></span>
+</label>
+
+<a href="#home" class="menu-item" title="Главная"> <i class="fa fa-home"></i> </a>
+<a href="#training" class="menu-item" title="О себе"> <i class="fa fa-graduation-cap"></i> </a>
+<a href="#sport" class="menu-item" title="Галерея"> <i class="fa fa-futbol-o"></i> </a>
+<a href="#news" class="menu-item" title="Игры"> <i class="fa fa-newspaper-o"></i> </a>
+<a href="#about" class="menu-item" title="Регистрация/Авторизация"> <i class="fa fa-user"></i> </a>
+<a href="#contact" class="menu-item" title="Комментарии/Контакты"> <i class="fa fa-envelope"></i> </a>
+
+</nav>
+
+</div>
+
+<div id="home" class="line">
+<h1>Главная</h1>
+<p>Стартовая страница нашего сайта</p>
+
+</div>
+<div id="training">
+<h1>О себе</h1>
+<p>Немного личной информации</p>
+
+</div>
+<div id="sport">
+<h1>Галерея</h1>
+
+</div>
+<div id="news">
+<h1>Игра</h1>
+<p>Играйте и весело проводите время!</p>
+</div>
+<div id="about">
+<h1>Регистрация/Авторизация</h1>
+<p>Регистрируйтесь и получите больше возможностей!</p>
+</div>
+<div id="contact">
+<h1>Комментарии/Контакты
+</h1>
+<p>Делитесь своим мнением и ищите нас в соц.сетях</p>
+</div>
+<!— partial —>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.mi..'></script><script src="./script.js"></script>
+
+</body>
+</html>
+

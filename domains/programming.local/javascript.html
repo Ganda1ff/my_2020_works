@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+</head>
+
+<body>
+    <ol id="ol">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+    </ol>
+    <script>
+        ol.before('before');
+        ol.after('after');
+
+        let liFirst = document.createElement('li');
+        liFirst.innerHTML = 'prepend';
+        ol.prepend(liFirst);
+
+        let liLast = document.createElement('li');
+        liLast.innerHTML = 'after';
+        ol.append(liLast);
+    </script>
+</body>
+
+</html>

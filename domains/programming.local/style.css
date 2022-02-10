@@ -1,0 +1,47 @@
+#gallery {
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-line {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image-box {
+    width: 200px;
+    height: 200px;
+}
+
+.min-image {
+    width: 100%;
+    height: 100%;
+}
+
+#big-image-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#big-image {
+    max-width: 70%;
+    max-height: 500px;
+}
+
+#buttons {
+    display: none;
+    justify-content: center;
+}

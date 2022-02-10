@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+    ::-moz-focus-inner {
+    border: 10;
+}
+
+.search-wrapper:hover input {
+    box-shadow: 0 1px 4px 0 
+rgba(12, 12, 13, 0.2), 0 0 0 1px
+    rgba(0, 0, 0, 0.25);
+}
+.search-wrapper input {
+    background: var(--newtab-textbox-background-color) var(--newtab-search-icon) 12px center no-repeat;
+    background-size: 24px;
+    border: solid 1px var(--newtab-search-border-color);
+    box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+    -moz-context-properties: fill;
+    fill: var(--newtab-search-icon-color);
+    padding: 0;
+    padding-inline-end: 48px;
+    padding-inline-start: 46px;
+    width: 100%;
+}
+input[type="text"], input[type="search"] {
+    border-radius: 3px;
+}
+button, input {
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+.search-wrapper .search-inner-wrapper {
+    cursor: default;
+}
+.outer-wrapper {
+    color: var(--newtab-text-primary-color);
+}
+элемент {
+    --newtab-search-icon: url(moz-extension://42ff3d17-0c56-4484-9640-d7aac0b3459c/yandex-ru.ico);
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+body {
+    --newtab-background-color: #F9F9FA;
+    --newtab-border-primary-color: #B1B1B3;
+    --newtab-border-secondary-color: #D7D7DB;
+    --newtab-element-active-color: rgba(215, 215, 219, 0.6);
+    --newtab-element-hover-color: #EDEDF0;
+    --newtab-icon-primary-color: rgba(12, 12, 13, 0.8);
+    --newtab-icon-secondary-color: rgba(12, 12, 13, 0.6);
+    --newtab-icon-tertiary-color: #D7D7DB;
+    --newtab-inner-box-shadow-color: rgba(0, 0, 0, 0.1);
+    --newtab-link-primary-color: #0060DF;
+    --newtab-link-secondary-color: #008EA4;
+    --newtab-text-conditional-color: #4A4A4F;
+    --newtab-text-primary-color: #0C0C0D;
+    --newtab-text-secondary-color: #737373;
+    --newtab-textbox-background-color: #FFF;
+    --newtab-textbox-border: rgba(12, 12, 13, 0.2);
+    --newtab-textbox-focus-color: #0060DF;
+    --newtab-textbox-focus-boxshadow: 0 0 0 1px #0060DF, 0 0 0 4px rgba(0, 96, 223, 0.3);
+    --newtab-button-primary-color: #0060DF;
+    --newtab-button-secondary-color: inherit;
+    --newtab-feed-button-background: #EDEDF0;
+    --newtab-feed-button-text: #0C0C0D;
+    --newtab-feed-button-background-faded: rgba(237, 237, 240, 0.6);
+    --newtab-feed-button-text-faded: rgba(12, 12, 13, 0);
+    --newtab-feed-button-spinner: #737373;
+    --newtab-contextmenu-background-color: #F9F9FA;
+    --newtab-contextmenu-button-color: #FFF;
+    --newtab-modal-color: #FFF;
+    --newtab-overlay-color: rgba(237, 237, 240, 0.8);
+    --newtab-section-header-text-color: #737373;
+    --newtab-section-navigation-text-color: #737373;
+    --newtab-section-active-contextmenu-color: #0C0C0D;
+    --newtab-search-border-color: transparent;
+    --newtab-search-dropdown-color: #FFF;
+    --newtab-search-dropdown-header-color: #F9F9FA;
+    --newtab-search-header-background-color: rgba(249, 249, 250, 0.95);
+    --newtab-search-icon-color: rgba(12, 12, 13, 0.4);
+    --newtab-search-wordmark-color: #363959;
+    --newtab-topsites-background-color: #FFF;
+    --newtab-topsites-icon-shadow: inset 0 0 0 1px var(--newtab-inner-box-shadow-color);
+    --newtab-topsites-label-color: inherit;
+    --newtab-card-active-outline-color: #D7D7DB;
+    --newtab-card-background-color: #FFF;
+    --newtab-card-hairline-color: rgba(0, 0, 0, 0.1);
+    --newtab-card-placeholder-color: #D7D7DB;
+    --newtab-card-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
+    --newtab-snippets-background-color: #FFF;
+    --newtab-snippets-hairline-color: transparent;
+    --trailhead-header-text-color: #2B2156;
+    --trailhead-cards-background-color: yellow;
+    --trailhead-card-button-background-color: black;
+    --trailhead-card-button-background-hover-color: rgba(12, 12, 13, 0.2);
+    --trailhead-card-button-background-active-color: rgba(12, 12, 13, 0.3);
+}
+._3W5h::before {
+    content: "";
+    width: 300px;
+    height: 4px;
+    background: url(/i/mail-pattern.svg) repeat-x;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+.rui__2NKQK a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.rui__2ye6J {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 35px;
+    max-width: 220px;
+    padding: 0 15px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 20px;
+    background: 
+    #c60d8b;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.rui__2NKQK * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a {
+    color: 
+    #262626;
+    text-decoration: none;
+    transition: color .2s;
+}
+a {
+    background-color: transparent;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.rui__1amKc {
+    color: #262626;
+}
+html {
+    color: #262626;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+    </style>
+  </head>
+  <title>Advertising on the site</title>
+  <nav><a href="file:///C:/Users/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/Documents/14.htm">Searcher.ru</a> | <a href="C:\Users\Пользователь\Documents\11.htm">Advertising on the site</a> | <a href="https://mail.rambler.ru/?utm_source=head&utm_campaign=self_promo&utm_medium=topline&utm_content=mail#/folder/INBOX">search.info@ro.ru</a> | <a href="file:///C:/Users/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/Documents/26.htm">Try our new app!</a></nav>
+    <hr>
+  <p align="center">
+      <font size=150 face="Times New Roman"><b>Advertising on the server Searcher.ru</b></font>
+    </p>
+    <p align="center">
+      <font size=4>Thank you for your interest in search engine advertising <a href="C:\Users\Пользователь\Documents\10.htm">Searcher.ru.</a>
+
+		We are pleased to offer you an effective and inexpensive way to promote your goods or services - title advertising. It works as follows:</font>
+    </p>
+    <p align="center">
+      <font size=4>Advertising appears on the main page of the site every time a user visits it.</font>
+    </p>
+    <p align="center">
+      <font size=4><b>According to market research on network advertising, contextual advertising is the most effective and inexpensive way to promote on the network.</b></font>
+    </p>
+    <p align="center">
+      <font size=4>For more information, contact us at <a href="https://mail.rambler.ru/?utm_source=head&utm_campaign=self_promo&utm_medium=topline&utm_content=mail#/folder/INBOX">search.info@ro.ru.</a> and provide information about yourself. Indicate the data in the form of a form.</font>
+    </p>
+    <p align="center">
+      <font size=5><b>Form Example:</b></font>
+    </p>
+    <form action="handler.php">
+        
+        <p align="center">The contact person:
+          <input type="email" name="login" value="John Paul Jones" readonly></p>
+        <p align="center">Свой Email: 
+          <input type="login" name="phone number" value="search.info@ro.ru"readonly></p>
+        <p align="center">Страна/город: 
+          <input type="email" name="login" value="USA, New York"readonly></p>
+        <p align="center">Сотовый номер: 
+          <input type="email" name="login" value="+1 234 567-89-00"readonly></p>
+        <p align="center">Комментарий: 
+          <input type="date" name="date" value="How to pay?"readonly></p>
+        
+
+        
+
+      </form>
+      <p align="center">
+        <font size=4><b><big>If you have any questions, write to us by email <a href="https://mail.rambler.ru/?utm_source=head&utm_campaign=self_promo&utm_medium=topline&utm_content=mail#/folder/INBOX">search.info@ro.ru</a></big></b></font>
+      </p>
+  </html>

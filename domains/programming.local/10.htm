@@ -1,0 +1,411 @@
+<html>
+
+    <head>
+        <style>
+body {
+    background-color:white;
+}
+::-moz-focus-inner {
+    border: 10;
+}
+
+.search-wrapper:hover input {
+    box-shadow: 0 1px 4px 0 
+rgba(12, 12, 13, 0.2), 0 0 0 1px
+    rgba(0, 0, 0, 0.25);
+}
+.search-wrapper input {
+    background: var(--newtab-textbox-background-color) var(--newtab-search-icon) 12px center no-repeat;
+    background-size: 24px;
+    border: solid 1px var(--newtab-search-border-color);
+    box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+    -moz-context-properties: fill;
+    fill: var(--newtab-search-icon-color);
+    padding: 0;
+    padding-inline-end: 48px;
+    padding-inline-start: 46px;
+    width: 100%;
+}
+input[type="text"], input[type="search"] {
+    border-radius: 3px;
+}
+button, input {
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+.search-wrapper .search-inner-wrapper {
+    cursor: default;
+}
+.outer-wrapper {
+    color: var(--newtab-text-primary-color);
+}
+элемент {
+    --newtab-search-icon: url(moz-extension://42ff3d17-0c56-4484-9640-d7aac0b3459c/yandex-ru.ico);
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+body {
+    --newtab-background-color: #F9F9FA;
+    --newtab-border-primary-color: #B1B1B3;
+    --newtab-border-secondary-color: #D7D7DB;
+    --newtab-element-active-color: rgba(215, 215, 219, 0.6);
+    --newtab-element-hover-color: #EDEDF0;
+    --newtab-icon-primary-color: rgba(12, 12, 13, 0.8);
+    --newtab-icon-secondary-color: rgba(12, 12, 13, 0.6);
+    --newtab-icon-tertiary-color: #D7D7DB;
+    --newtab-inner-box-shadow-color: rgba(0, 0, 0, 0.1);
+    --newtab-link-primary-color: #0060DF;
+    --newtab-link-secondary-color: #008EA4;
+    --newtab-text-conditional-color: #4A4A4F;
+    --newtab-text-primary-color: #0C0C0D;
+    --newtab-text-secondary-color: #737373;
+    --newtab-textbox-background-color: #FFF;
+    --newtab-textbox-border: rgba(12, 12, 13, 0.2);
+    --newtab-textbox-focus-color: #0060DF;
+    --newtab-textbox-focus-boxshadow: 0 0 0 1px #0060DF, 0 0 0 4px rgba(0, 96, 223, 0.3);
+    --newtab-button-primary-color: #0060DF;
+    --newtab-button-secondary-color: inherit;
+    --newtab-feed-button-background: #EDEDF0;
+    --newtab-feed-button-text: #0C0C0D;
+    --newtab-feed-button-background-faded: rgba(237, 237, 240, 0.6);
+    --newtab-feed-button-text-faded: rgba(12, 12, 13, 0);
+    --newtab-feed-button-spinner: #737373;
+    --newtab-contextmenu-background-color: #F9F9FA;
+    --newtab-contextmenu-button-color: #FFF;
+    --newtab-modal-color: #FFF;
+    --newtab-overlay-color: rgba(237, 237, 240, 0.8);
+    --newtab-section-header-text-color: #737373;
+    --newtab-section-navigation-text-color: #737373;
+    --newtab-section-active-contextmenu-color: #0C0C0D;
+    --newtab-search-border-color: transparent;
+    --newtab-search-dropdown-color: #FFF;
+    --newtab-search-dropdown-header-color: #F9F9FA;
+    --newtab-search-header-background-color: rgba(249, 249, 250, 0.95);
+    --newtab-search-icon-color: rgba(12, 12, 13, 0.4);
+    --newtab-search-wordmark-color: #363959;
+    --newtab-topsites-background-color: #FFF;
+    --newtab-topsites-icon-shadow: inset 0 0 0 1px var(--newtab-inner-box-shadow-color);
+    --newtab-topsites-label-color: inherit;
+    --newtab-card-active-outline-color: #D7D7DB;
+    --newtab-card-background-color: #FFF;
+    --newtab-card-hairline-color: rgba(0, 0, 0, 0.1);
+    --newtab-card-placeholder-color: #D7D7DB;
+    --newtab-card-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
+    --newtab-snippets-background-color: #FFF;
+    --newtab-snippets-hairline-color: transparent;
+    --trailhead-header-text-color: #2B2156;
+    --trailhead-cards-background-color: yellow;
+    --trailhead-card-button-background-color: black;
+    --trailhead-card-button-background-hover-color: rgba(12, 12, 13, 0.2);
+    --trailhead-card-button-background-active-color: rgba(12, 12, 13, 0.3);
+}
+._3W5h::before {
+    content: "";
+    width: 300px;
+    height: 4px;
+    background: url(/i/mail-pattern.svg) repeat-x;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+		</style>
+
+			
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+
+			 </script>
+
+	</head>
+	<nav><a href="https://mail.rambler.ru/?utm_source=head&utm_campaign=self_promo&utm_medium=topline&utm_content=mail#/folder/INBOX">search.info@ro.ru</a> | <a href="C:\Users\Пользователь\Documents\10.htm">Our site</a> | <a href="C:\Users\Пользователь\Documents\11.htm">Advertising on the site</a> | <a href="C:\Users\Пользователь\Documents\12.htm">About us</a> | <a href="https://www.timeanddate.com/worldclock/">Time</a> | <a href="https://www.timeanddate.com/calendar/?country=9">Calendar</a> | <a href="https://vk.com/public188103721">We are on VK</a> | <a href="https://www.facebook.com/groups/730631560734570/">We are on Facebook</a> | <a href="https://www.instagram.com/searcher49/">We are on Instagram</a> | <a href="https://imgur.com/">Images</a> | <a href="C:\Users\Пользователь\Desktop\6.htm">Russian version</a></nav>
+	<hr color="red">
+	<table  border=0 cellspacing=0 cellpadding=0>
+			<form action="http://results.metabot.ru/" method="GET" target="_blank">
+			<tr><td align=center><select name="wd">
+			<option selected value=0>searcher.com: internet</option>
+			<option value=1>searcher.com: whole world</option>
+			<option value=2>searcher.com: ftp</option>
+			<option value=3>searcher.com: mp3/divx</option>
+			<option value=4>searcher.com: articles</option>
+			</select></td></tr>
+			<tr><td align="left"><input type="text" size="16" name="st" placeholder="Search in browser">
+				<input type="submit" value="⌕" size=200 style="background-color: #FFFFFF;
+				font-size:  10pt; width: 20px; height: 20px; border-style: solid; border-width: 1; 
+				border-color: blue;"></td></tr>
+			<p align="left">
+				<font size=3><big><b>$63.8320</b></big></font><font size=3 color="red"> –0.0380 –0.06%  </font><font size=3><big><b> | €71.0081</b></big></font><font size=3 color="green"> +0.2312 +0.33% </font><font size=3><big> | New York</big></font><font size=3 color="blue"> ☁16°C</font><font size=3>⇒</font><font size=3 color="blue">60.8°F</font><font size=3><big> | London</big></font><font size=3 color="blue"> ☁8°C</font><font size=3>⇒</font><font size=3 color="blue">46.4°F</font><font size=3><big> | </big></font><font size=3 color="green"><big>31.</big></font><font size=3 color="red"><big>10.</big></font><font size=3 color="blue"><big>19 </big></font><font size=3><big> | </big></font><script type="text/javascript">
+					
+					setInterval(function () {  
+					 date = new Date(),  
+					 h = date.getHours(),  
+					 m = date.getMinutes(),  
+					 s = date.getSeconds(),  
+					 h = (h < 10) ? '0' + h : h,  
+					 m = (m < 10) ? '0' + m : m,  
+					 s = (s < 10) ? '0' + s : s,  
+					 document.getElementById('time').innerHTML = h + ':' + m + ':' + s;  
+					}, 1000);
+					</script>
+					
+					<span style="color:#7e5a25; font-size:14pt; border:2px solid #e1d4ae; background:#e8e3d4; padding:5px;">
+					<span id="time">00:00:00</span>
+					</span>
+					
+					
+				
+			
+						
+			
+			
+				
+			</form></table>
+			
+		<div align="center">
+			<font size=1000 color="blue" face="Andalus"><tt><big><b>               ⌕</tt></b></big></font><font size=200 color="green" face="Andalus"><b>s</b></font><font size=1000 color="red" face="Andalus"><b>e</b></font><font size=1000 color="gold" face="Andalus"><b>a</b></font><font size=1000 color="red" face="Andalus"><b>r</b></font></font><font size=1000 color="blue" face="Andalus"><b>ch</b></font><font size=1000 color="red" face="Andalus"><b>e</b></font><font size=1000 color="green" face="Andalus"><b>r</b></font>
+		</div>
+				
+        <title>Searcher - English version</title>
+        
+            <p align="center">
+				<form>
+					<table align="center" border=4 bordercolor="blue" weidth=400 height=26>
+						<tr>
+				<td><input type="search" name="q" placeholder="Search in Google"></td>
+				<td><input autocomplete="on" weidth=20 height=5 type="submit" value="Search" formaction="https://www.google.com//" formmethod="get | post"></td>
+			  </tr>
+					</table>
+					
+			<p align="center">
+			   <form>
+					<table align="center" border=4 bordercolor="green" weidth=400 height=26>
+							<tr>
+			<td><input placeholder="Search in Yahoo"></td>
+			<td><input autocomplete="on" weidth=20 height=5 type="submit"  value="Search" formaction="https://www.yahoo.com/" formmethod="get | post"></td>
+			<td><input placeholder="Search in Ask.com"></td>
+			<td><input autocomplete="on" weidth=20 height=5 type="submit"  value="Search" formaction="https://www.ask.com/" formmethod="get | post"></td>
+							</tr>
+					</table>
+			<p align="left">
+			  <form>
+					<table align="center" border=4 bordercolor="gold" weidth=400 height=26>
+					<tr>
+						<td><input placeholder="Search in AOL"></td>
+					<td><input autocomplete="on" weidth=20 height=5 type="submit"  value="Search" formaction="https://www.aol.com/" formmethod="get | post"></td>
+			
+			<td><input type="search" name="q" placeholder="Search in Bing"></td>
+		<td><input autocomplete="on" weidth=20 height=5 type="submit" value="Search" formaction="https://www.bing.com/?scope=web&mkt=ru-RU&FORM=IESR02" formmethod="get | post"></td>
+		  </tr>
+				</table>
+				<p align="center">
+					<form>
+				<table align="center" border=4 bordercolor="orange" weidth=400 height=26>
+						<tr>
+		<td><input placeholder="Search in MetaBear"></td>
+		<td><input autocomplete="on" weidth=20 height=5 type="submit"  value="Search" formaction="http://www.metabear.ru/" formmethod="get | post"></td>
+		<td><input placeholder="Search in Baudi"></td>
+		<td><input autocomplete="on" weidth=20 height=5 type="submit"  value="Search" formaction="http://baiduinenglish.com/" formmethod="get | post"></td>
+						</tr>
+				</table>
+				</form>
+			
+				
+			<p align="center">
+				<font size=5 color="blue" face="Andalus"><big>M</big></font><font size=5 color="green-yellow" face="Andalus"><big>a</big></font><font size=5 color="red" face="Andalus"><big>i</big></font><font size=5 color="green" face="Andalus"><big>n</big></font><font size=5 color="blue" face="Andalus"> <big>s</big></font><font size=5 color="green-yellow" face="Andalus"><big>e</big></font><font size=5 color="green" face="Andalus"><big>r</big></font><font size=5 color="red" face="Andalus"><big>v</big></font><font size=5 color="red" face="Andalus"><big>i</big></font><font size=5 color="gold" face="Andalus"><big>s</font><font size=5 color="red" face="Andalus"><big>e</big></font><font size=5 color="blue" face="Andalus"><big>s</big></font>
+			</p>
+		<table align="center" border=3 weidth=100 height=26 bordercolor="blue">
+           <tr>
+			<td><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></td>
+			
+		  <td><a href="https://www.google.com/search?stick=H4sIAAAAAAAAAOPQeMSozC3w8sc9YSmpSWtOXmMU4RJyy8xLzEtO9UnMS8nMSw9ITE_lAQCCiJIYKAAAAA&q=finance&tbm=fin">Finance</a></td>
+			  
+					<td><a href="https://www.weather-forecast.com/">Weather forecast</a></td>
+		
+						<td><a href="https://www.bbc.com/news/england">News</a></td>
+						</tr>
+						</table>
+						<table  align="center" border=3 weidth=100 height=26 bordercolor="red">
+								<tr>
+										<td><a href="https://www.google.ru/maps/d/viewer?mid=13KV_AQbedE2UGWstx2Tf1l2IUlk&hl=en_US&ll=39.4678604570007%2C-0.36956099999997605&z=15">Maps</a></td>
+							
+											<td><a href="https://www.gamesgames.com/">Games</a></td>
+											
+															<td><a href="https://www.horoscope.com/us/index.aspx">Horoscope</a></td>
+												
+																<td><a href="https://ru.aliexpress.com/">Market</a></td>
+																</tr>
+																</table>
+
+																<table  align="center" border=3 weidth=100 height=26 bordercolor="green">
+																		<tr>
+																				<td><a href="https://soundcloud.com/">Music</a></td>
+																	
+																					<td><a href="https://ethertv.com/">TV ether</a></td>
+																															
+																							
+																									<td><a href="https://www.ontvtonight.com/guide/">TV programm</a></td>
+																						
+																										<td><a href="https://www.imdb.com/list/ls002314645/">Filmsearch</a></td>
+																										</tr>
+																										</table>
+
+																										<table  align="center" border=3 weidth=100 height=26 bordercolor="gold">
+																												<tr>
+																														<td><a href="https://allthatsinteresting.com/tag/news">Intresting</a></td>
+																											
+																															<td><a href="https://www.currentschoolnews.com/">School news</a></td>
+																																									
+																																	
+																																			<td><a href="https://www.arealme.com/american-english-test/en/">Tests</a></td>
+																																
+																																				<td><a href="https://www.americanews.com/?cat=6">Fashion</a></td>
+																																				</tr>
+																																				</table>
+					
+       
+						
+					<p align="center">
+						<font size=5 color="green" ><big>S</big></font><font size=5 color="blue" face="Andalus"><big>o</big></font><font size=5 color="green-yellow" face="Andalus"><big>c</big></font><font size=5 color="red" face="Andalus"><big>i</big></font><font size=5 color="green" face="Andalus"><big>a</big></font><font size=5 color="blue" face="Andalus"><big>l</big></font><font size=5 color="green-yellow" face="Andalus"><big> n</big></font><font size=5 color="green" face="Andalus"><big>e</big></font><font size=5 color="red" face="Andalus"><big>t</big></font><font size=5 color="red" face="Andalus"><big>w</big></font><font size=5 color="gold" face="Andalus"><big>o</font><font size=5 color="red" face="Andalus"><big>r</big></font><font size=5 color="blue" face="Andalus"><big>k</big></font><font size=5 color="green" face="Andalus"><big>s</big></font>
+					</p>
+					
+					<table align="center" border=3 weidth=100 height=26 bordercolor="blue">
+						<tr>
+						<td><a href="https://soundcloud.com/">Soundcloud</a></td>
+
+										<td><a href="https://en-gb.facebook.com/login/">Facebook</a></td>
+								
+												<td><a href="https://www.youtube.com/">YouTube</a></td>
+											   </tr>
+											    </table>
+								
+												       <table align="center" bordercolor="green" border=3>
+														<tr>
+														<td><a href="https://www.instagram.com/">Instagram</a></td>
+														
+													
+														<td><a href="https://twitter.com/">Twitter</a></td>
+														
+												
+														<td><a href="https://discordapp.com/">Discord</a></td>
+														
+																	
+												
+												</tr>
+												</table>
+												
+											<p align="center">
+												<font size=5 color="red" face="Andalus"><big>P</big></font><font size=5 color="green" ><big>o</big></font><font size=5 color="blue" face="Andalus"><big>p</big></font><font size=5 color="green-yellow" face="Andalus"><big>u</big></font><font size=5 color="red" face="Andalus"><big>l</big></font><font size=5 color="green" face="Andalus"><big>a</big></font><font size=5 color="blue" face="Andalus"><big>r</big></font><font size=5 color="green-yellow" face="Andalus"><big> s</big></font><font size=5 color="green" face="Andalus"><big>i</big></font><font size=5 color="red" face="Andalus"><big>t</big></font><font size=5 color="red" face="Andalus"><big>e</big></font><font size=5 color="gold" face="Andalus"><big>s</font>
+												
+											</p>
+
+
+												<table align="right" bordercolor="gold" border=3>
+														<tr>
+														<td><a href="https://www.amazon.com/">Amazon</a></td>
+														
+													</tr>
+												</table>
+												<table align="right" bordercolor="blue" border=3>
+														<tr>
+														<td><a href="https://www.buzzfeed.com/">BuzzFeed</a></td>
+														
+													</tr>
+												</table>
+												<table align="right" bordercolor="green" border=3>
+														<tr>
+														<td><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Wikipedia</a></td>
+														
+													</tr>
+												</table>
+												<table align="right" bordercolor="red" border=3>
+														<tr>
+														<td><a href="https://www.reddit.com/">Reddit</a></td>
+														
+													</tr>
+												</table>	
+
+												<table align="right" bordercolor="blue" border=3>
+														<tr>
+														<td><a href="https://www.blogger.com/about/?r=1-null_user">Blogger</a></td>
+														
+													</tr>
+												</table>
+										<table align="right" bordercolor="orange" border=3>
+														<tr>
+														<td><a href="https://www.careerone.com.au/">CareerOne</a></td>
+														
+													</tr>
+												</table>
+												<table align="right" bordercolor="green" border=3>
+														<tr>
+														<td><a href="https://www.ticketnetwork.com/en/">TicketNetwork</a></td>
+														
+													</tr>
+												</table>
+												<table align="right" bordercolor="gold" border=3>
+														<tr>
+														<td><a href="https://www.ibackpage.com/">BackPage</a></td>
+														
+													</tr>
+												</table>
+
+												
+												<table align="right" bordercolor="blue" border=3>
+														<tr>
+														<td><a href="https://translate.google.ru/">Translator</a></td>
+														
+													</tr>
+												</table>
+												<table align="right" bordercolor="orange" border=3>
+														<tr>
+														<td><a href="https://www.americanairlines.com.ru/intl/ru/index.jsp?locale=ru_RU">AmericanAirlines</a></td>
+														
+													</tr>
+												</table>
+
+												
+												<table align="right" bordercolor="gold" border=3>
+														<tr>
+														<td><a href="https://best.aliexpress.com/?lan=ru">Aliexpress</a></td>
+														
+													</tr>
+												</table>
+
+												<table align="right" bordercolor="red" border=3>
+														<tr>
+														<td><a href="https://www.msn.com/?lang=en-us">MSN</a></td>
+														
+													</tr>
+                                                </table>
+                                                <table align="right" bordercolor="green" border=3>
+														<tr>
+														<td><a href="https://www.apple.com/">Apple</a></td>
+														
+													</tr>
+												</table>
+												<table align="right" bordercolor="blue" border=3>
+													<tr>
+													<td><a href="https://ru.wordpress.com/">WordPress</a></td>
+													
+												</tr>
+											</table>
+											
+										<table align="right" bordercolor="gold" border=3>
+												<tr>
+												<td><a href="https://www.microsoft.com/en-gb">Microsoft</a></td>
+												
+											</tr>
+										</table>
+									</table>             
+                                               
+									
+		</html>

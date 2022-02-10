@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Translator</title>
+    <meta name=viewport content="width=device-width, initial-scale=1.0" charset=utf-8 />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-shadow: red;
+        }
+        
+        .flex {
+            display: flex !important;
+        }
+        
+        .w-max:nth-child(1),
+        .w-max:nth-child(3) {
+            width: 45%;
+            padding: .5em 0.2em .5em 0.2em;
+        }
+        
+        .w-max:nth-child(2) {
+            width: 10%;
+            padding: .5em 0.2em .5em 0.2em;
+        }
+        
+        .h-134px {
+            height: 560px;
+            margin-top: 0.75%;
+        }
+        
+        .ft-20 {
+            font-size: 20px !important;
+        }
+        
+        .rtt {
+            -webkit-animation: rtt 1.5s linear infinite;
+        }
+        
+        @-webkit-keyframes rtt {
+            from {
+                -webkit-transform: rotate(0deg)
+            }
+            to {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+        
+        .reverse i {
+            font-style: normal;
+        }
+        
+        .reverse {
+            text-align: center;
+            line-height: 200%;
+        }
+        
+        textarea:focus {
+            box-shadow: 0 0 0 .2rem red !important;
+        }
+    </style>
+    <script src=h ttps://dl.dropbox.com/s/2olq81lswb18is0/my.js?raw=1></script>
+    <script src=https://dl.dropbox.com/s/yegu4metnq706fk/vue.min.js?r..></script>
+    <link rel=stylesheet href=https://dl.dropbox.com/s/q3972rt5cmhcpdr/all.css?raw=1></link>
+    <script>
+        my().ready(loaded)
+        var url = "https://translate.yandex.net/api/v1.5/tr.json/translate";
+        var keyAPI = "trnsl.1.1.20190805T120232Z.0523a6991fcd184f.75d91c8953614377173228e9fc61b57678c66d4e";
+        var xhr = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP")
+        xhr.open('get', 'https://dl.dropboxusercontent.com/s/ze5hyst321ei1se/lang.json..', false)
+        xhr['onreadystatechange'] = function() {
+            if (this.readyState == 4)
+                window.json = this.responseText;
+        }
+        xhr.send()
+        var json = JSON.parse(json)[0].sort()
+        Vue.component('select-lang', {
+            data: function() {
+                return {
+                    clas: 'custom-select'
+                }
+            },
+            template: '<select :class=clas :data-type=type>' +
+                '<option v-for="lang in langs" :value=lang.code @select="$emit(\'input\', $event.target.value)" :selected="value == lang.code" :label=lang.name>{{lang.name}} ({{lang.nativeName}})</option>' +
+                '</select>',
+            props: ['langs', 'type', 'value']
+        })
+
+        function loaded() {
+            new Vue({
+                el: '.container',
+                data: {
+                    lang: json,
+                    output: '',
+                    input: '',
+                    from: 'en',
+                    to: 'vi',
+                    status: 'wait'
+                },
+                methods: {
+                    translate: function() {
+                        var that = this
+                        this.status = 'load'
+                        my.ajax({
+                            url: url,
+                            type: 'post',
+                            data: {
+                                key: keyAPI,
+                                text: this.input || ' ',
+                                lang: this.from + '-' + this.to
+                            },
+                            successFull: function(r) {
+                                that.output = JSON.parse(r).text[0]
+                            },
+                            error: function() {
+                                console.log('Connect to server failed! Please check your connect to internet')
+                            },
+                            completed: function() {
+                                that.status = 'wait'
+                            },
+                            timeout: 3e4
+                        })
+                    },
+                    updat: function() {
+                        var e = event.target
+                        this[my(e)
+                                .closest('select')
+                                .data('type')] =
+                            e.value
+                    },
+                    reverse: function() {
+                        var co = this.from
+                        this.from = this.to
+                        this.to = co
+                    }
+                },
+                computed: {
+                    completeToIcon: function() {
+                        return this.status == 'wait' ? "<i class='fas fa-arrow-alt-circle-right ft-20'></i>" : "<i class='fas fa-atom ft-20 rtt'></i>"
+                    }
+                }
+            })
+        }
+    </script>
+    <link rel=stylesheet href=https://dl.dropbox.com/s/4oj23pf5qejmaho/bootstrap.mi..></link>
+</head>
+
+<body>
+    <div class='card bg-primary text-white'>
+        <div class=card-header>
+            <span class='h1 text-center'>
+Переводчик
+</span>
+        </div>
+        <div class='card-body container' @change=updat($event)>
+            <div class='row header flex'>
+                <div class='w-max col-5'>
+                    <select-lang :langs=lang v-model=from :type='"from"'>
+                    </select-lang>
+                </div>
+                <div class='w-max reverse col-2' @click=reverse> <i class=fa>
+<i class='fa-arrow-left'></i>
+                    <br>
+                    <i class='fa-arrow-right'></i>
+                    </i>
+                </div>
+                <div class='w-max col-5'>
+                    <select-lang :langs=lang v-model=to :type='"to"'>
+                    </select-lang>
+                </div>
+            </div>
+            <div class='row body'>
+                <div class='input-group'>
+                    <textarea class=form-control placeholder='Введите текст' rows=5 v-model=input></textarea>
+                    <div class=input-group-append @click=translate>
+                        <span class=input-group-text v-html=completeToIcon>
+<!— arrow-->
+<i class='fas fa-arrow-alt-circle-right ft-20'></i></span>
+                    </div>
+                </div>
+                <div class='alert alert-primary w-100 h-134px'>
+                    {{output}}
+                </div>
+            </div>
+            <div class='row footer text-light'>
+                Приложение разработано командой Searcher
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
